@@ -21,7 +21,21 @@ function firstPageAnimation() {
     opacity: 0,
     duration: 1.5,
     ease: "expo.inOut",
-  });
+  })
+    .to(".bounding-h1", {
+      y: "0",
+      duration: 2,
+      ease: "expo.inOut",
+      stagger: 0.2,
+      delay: -1,
+    })
+    .from("#hero-footer", {
+      y: "-10",
+      opacity: 0,
+      duration: 1.5,
+      ease: "expo.inOut",
+      delay: -1,
+    });
 }
 
 function circleMouseFollow() {
