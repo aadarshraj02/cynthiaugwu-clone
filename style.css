@@ -122,3 +122,32 @@
   color: #000;
   font-weight: 900;
 }
+#second {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  padding-top: 150px;
+  padding-left: 3vw;
+  padding-right: 10vw;
+  color: #a3a3a3;
+}
+.elem {
+  width: 100%;
+  border-top: 1px solid #aaaaaa;
+  padding: 4vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.elem h1 {
+  text-transform: uppercase;
+  font-size: 7.5vw;
+}
+.elem h5 {
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2vw;
+}
+.last {
+  border-bottom: 1px solid #aaaaaa;
+}
