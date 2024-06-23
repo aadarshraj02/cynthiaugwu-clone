@@ -38,12 +38,35 @@ function firstPageAnimation() {
     });
 }
 
-function circleMouseFollow() {
+var timeout;
+function circleSkew() {
+  var xScale = 1;
+  var yScale = 1;
+  var xPrev = 0;
+  var yPrev = 0;
+
+  window.addEventListener("mousemove", (details) => {
+    this.clearTimeout(timeout);
+    xScale = gsap.utils.clamp(0.8, 1.2, details.clientX - xPrev);
+    yScale = gsap.utils.clamp(0.8, 1.2, details.clientY - yPrev);
+    xPrev = details.clientX;
+    yPrev = details.clientY;
+    circleMouseFollow(xScale, yScale);
+    timeout = this.setTimeout(() => {
+      circle.style.transform = `
+        translate(${details.clientX}px, ${details.clientY}px) scale(1,1)
+        `;
+    }, 100);
+  });
+}
+
+function circleMouseFollow(xScale, yScale) {
   window.addEventListener("mousemove", (details) => {
     circle.style.transform = `
-    translate(${details.clientX}px, ${details.clientY}px)
+    translate(${details.clientX}px, ${details.clientY}px) scale(${xScale},${yScale})
     `;
   });
 }
 circleMouseFollow();
 firstPageAnimation();
+circleSkew();
