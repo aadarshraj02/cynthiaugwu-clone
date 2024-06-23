@@ -30,3 +30,18 @@
   text-decoration: none;
   font-size: 18px;
 }
+#nav #menu {
+  cursor: pointer;
+}
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 40px;
+  padding: 0 40px;
+  display: none;
+}
+#nav-part2 a {
+  color: #fff;
+  text-decoration: none;
+}
