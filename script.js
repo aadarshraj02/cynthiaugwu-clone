@@ -6,3 +6,8 @@ menuButton.addEventListener("click", () => {
   navPart2.classList.remove("hidden");
   navPart2.classList.add("visible");
 });
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+});
