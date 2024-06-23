@@ -158,3 +158,38 @@
   height: 140%;
   display: none;
 }
+#about {
+  width: 100%;
+  background-color: #000;
+  padding: 10vw;
+  padding-left: 35vw;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+#about img {
+  width: 250px;
+}
+#about-text {
+  width: 25rem;
+}
+#about-text h5 {
+  color: #a3a3a3;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#about-text p {
+  color: #fff;
+  text-align: justify;
+  font-size: 1.3vw;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+#about-text a {
+  text-decoration: none;
+  padding: 10px 22px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  /* font-size: 12px; */
+}
