@@ -76,10 +76,19 @@
 }
 .block-text {
   width: fit-content;
-  background-color: aqua;
 }
 .block-text h5 {
   text-align: right;
   text-transform: uppercase;
   font-size: 18px;
+}
+#side-details {
+  margin-top: 150px;
+  padding-right: 30px;
+}
+#side-details h5 {
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 0.5vw;
+  font-size: 1.3vw;
 }
