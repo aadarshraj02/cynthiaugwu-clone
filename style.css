@@ -33,15 +33,29 @@
 #nav #menu {
   cursor: pointer;
 }
-#nav-part2 {
+.nav-part2 {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 40px;
   padding: 0 40px;
-  display: none;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-#nav-part2 a {
+.nav-part2.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.nav-part2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav-part2 a {
   color: #fff;
   text-decoration: none;
 }
