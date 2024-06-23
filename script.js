@@ -13,6 +13,17 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 });
 
+function firstPageAnimation() {
+  var tl = gsap.timeline();
+
+  tl.from("#nav", {
+    y: "-10",
+    opacity: 0,
+    duration: 1.5,
+    ease: "expo.inOut",
+  });
+}
+
 function circleMouseFollow() {
   window.addEventListener("mousemove", (details) => {
     circle.style.transform = `
@@ -21,3 +32,4 @@ function circleMouseFollow() {
   });
 }
 circleMouseFollow();
+firstPageAnimation();
