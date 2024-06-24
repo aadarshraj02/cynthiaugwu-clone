@@ -131,6 +131,7 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+
 #icons {
   display: flex;
   gap: 7px;
@@ -180,7 +181,7 @@
   position: absolute;
   z-index: 10;
   height: 140%;
-  display: none;
+  opacity: 0;
 }
 #about {
   width: 100%;

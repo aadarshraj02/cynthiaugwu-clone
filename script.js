@@ -67,6 +67,36 @@ function circleMouseFollow(xScale, yScale) {
     `;
   });
 }
+document.querySelectorAll(".elem").forEach((elem) => {
+  var rotate = 0;
+  var difference = 0;
+  elem.addEventListener("mousemove", (details) => {
+    var diff = details.clientY - elem.getBoundingClientRect().top;
+    difference = rotate - details.clientX;
+    rotate = details.clientX;
+
+    gsap.to(elem.querySelector("img"), {
+      opacity: 1,
+      ease: Power3,
+      top: diff,
+      left: details.clientX,
+      rotate: gsap.utils.clamp(-20, 20, difference * 0.6),
+    });
+  });
+
+  elem.addEventListener("mouseleave", (details) => {
+    var diff = details.clientY - elem.getBoundingClientRect().top;
+    difference = rotate - details.clientX;
+    rotate = details.clientX;
+
+    gsap.to(elem.querySelector("img"), {
+      opacity: 0,
+      ease: Power3,
+      duration: 0.5,
+    });
+  });
+});
+
 circleMouseFollow();
 firstPageAnimation();
 circleSkew();
